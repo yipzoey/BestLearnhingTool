@@ -1,18 +1,32 @@
 <html>
   <head>
     <title>Create a data store </title>
+    <script src = "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"> </script>
+    <script src = "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js"> </script>
     <script src = "https://github.com/yipzoey/BestLearnhingTool/blob/main/JavaScript/dataManage.js"> </script>
-    <script src = "https://github.com/yipzoey/BestLearnhingTool/blob/main/JavaScript/firebase-connector.js"> </script>
   </head>
 
   <body>
-    Question <input id = "quesbox" type = "text"></input> <br><br>
-    Answer <input id = "answerbox" type = "text"></input> <br><br>
-    <button id = "update"> UPDATE </button>
-    <button id = "delete"> DELETE </button>
+      Question <input id = "quesbox" type = "text"></input> <br><br>
+      Answer <input id = "answerbox" type = "text"></input> <br><br>
+      <button id = "update"> UPDATE </button>
+      <button id = "delete"> DELETE </button>
 
+    <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeKhOrLs_dVKovYBSd7gy3CIYk_obYGpI",
+      authDomain: "best-learning-tool-a5972.firebaseapp.com",
+      projectId: "best-learning-tool-a5972",
+      storageBucket: "best-learning-tool-a5972.appspot.com",
+      messagingSenderId: "709817333674",
+      appId: "1:709817333674:web:dac6b10928ea7ced5d5dd3",
+      measurementId: "G-6V9GXY2H48"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
 
   </body>
 
 </html>
-
