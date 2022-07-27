@@ -1,23 +1,17 @@
-let myFlashcards = [ {
-    "question": "Name this species of bird.",
-    "image" : "images/barn-owl-2550068__340.webp",
-    "answer": "Barn Owl"
-    },
-    {
-    "question": "Name this species of bird.",
-    "image" : "images/dove-2516641__340.webp",
-    "answer": "Dove"
-    },
-    {
-    "question": "Name this species of bird.",
-    "image" : "images/hummingbird-2139279__340.webp",
-    "answer": "Hummingbird"
-    }
-  ];
+//References
+      var quesbox = document.getElementById("quesbox");
+      var answerbox = document.getElementById("answerbox");
 
-let dbLocation = firebase.database().ref('deck/flashcards'); 
- 
-dbLocation.set(myFlashcards);
+      var add = document.getElementById("add");
+      var delete = document.getElementById("delete");
 
-
-
+      function AddData (){
+        set(ref(database, 'deck/flashcards').{
+          Question:quesbox.value,
+          Answer:answerbox.value,
+        })
+        .then(() => {
+          alert("data added")
+        });
+      }
+      insBtn.addEventListener("click",AddData);
