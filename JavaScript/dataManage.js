@@ -3,7 +3,7 @@
       var answerbox = document.getElementById("answerbox");
 
       var add = document.getElementById("add");
-      var delete = document.getElementById("delete");
+      var dele = document.getElementById("delete");
 
       function AddData (){
         set(ref(database, 'deck/flashcards').{
@@ -14,4 +14,4 @@
           alert("data added")
         });
       }
-      insBtn.addEventListener("click",AddData);
+      add.addEventListener("click",AddData);
